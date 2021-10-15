@@ -23,16 +23,24 @@ public class Main {
         playerLinkedList.addToFront(momKingDad);
 
         // Print linked list before removing first element
-        // printList() also prints size
         System.out.println("Linked list before removal:");
         playerLinkedList.printList();
+        System.out.println("\n[Size of List:] " + playerLinkedList.count()); // Counts the size of array
+
+        // Test to see if the LinkedList contains chicken and get its index
+        System.out.println((playerLinkedList.contains(momKingDad)));
+        playerLinkedList.indexOf(momKingDad);
 
         // Remove the first element of a linked list
         playerLinkedList.remove();
 
         // Print linked list after removing first element
-        // printList() also prints size
         System.out.println("\n\nLinked list after removal:");
         playerLinkedList.printList();
+        System.out.println("\n[Size of List:] " + playerLinkedList.count()); // Counts the size of array
+
+        // Test again to see if the LinkedList contains chicken and get its index
+        System.out.println((playerLinkedList.contains(momKingDad)));
+        playerLinkedList.indexOf(momKingDad);
     }
 }
