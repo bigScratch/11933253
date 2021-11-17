@@ -50,6 +50,20 @@ public class Node {
         }
     }
 
+    public void traverseInOrderDescending()
+    {
+        if (rightChild != null)
+        {
+            rightChild.traverseInOrderDescending();
+        }
+        System.out.println("Data: " + data);
+
+        if (leftChild != null)
+        {
+            leftChild.traverseInOrderDescending();
+        }
+    }
+
     public Node get(int value)
     {
         if (value == data)
@@ -81,6 +95,24 @@ public class Node {
 
     public int getData() {
         return data;
+    }
+
+    public Node getMin(Node node) {
+        while(node.getLeftChild() != null)
+        {
+            node = node.getLeftChild();
+        }
+        System.out.println("Minimum Value: " + node.getData());
+        return node;
+    }
+
+    public Node getMax(Node node) {
+        while(node.getRightChild() != null)
+        {
+            node = node.getRightChild();
+        }
+        System.out.println("Maximum Value: " + node.getData());
+        return node;
     }
 
     public void setData(int data) {
